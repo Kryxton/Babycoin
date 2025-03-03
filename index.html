@@ -36,18 +36,14 @@
       height: 100vh;
       background-color: #000;
       z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
     }
     .splash-screen video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
+      width: 100vw;   /* Always fill the viewport width */
+      height: auto;   /* Maintain aspect ratio */
     }
     
     /*****************************************
@@ -225,7 +221,7 @@
     }
     .chart-container iframe {
       width: 100%;
-      height: 500px;
+      height: 600px;
       border: none;
     }
     @media (max-width: 480px) {
@@ -309,13 +305,13 @@
       
       <!-- Chart Container -->
       <div class="chart-container">
-     <iframe 
-	width="100%" 
-	height="600" 
-	src="https://birdeye.so/tv-widget/2s1GbUMfTLAH67Y7o7v7Z86TK8jzZTrRBk5U3sJgpump?chain=solana&viewMode=pair&chartInterval=15&chartType=Candle&chartTimezone=Europe%2FBerlin&chartLeftToolbar=show&theme=dark&cssCustomProperties=--tv-color-platform-background%3A%23000000&cssCustomProperties=--tv-color-pane-background%3A%23000000&chartOverrides=paneProperties.backgroundGradientStartColor%3Argba%280%2C+0%2C+0%2C+1%29&chartOverrides=paneProperties.backgroundGradientEndColor%3Argba%280%2C+0%2C+0%2C+1%29" 
-	frameborder="0" 
-	allowfullscreen>
-</iframe>
+        <iframe 
+          width="100%" 
+          height="600" 
+          src="https://birdeye.so/tv-widget/2s1GbUMfTLAH67Y7o7v7Z86TK8jzZTrRBk5U3sJgpump?chain=solana&amp;viewMode=pair&amp;chartInterval=15&amp;chartType=Candle&amp;chartTimezone=Europe%2FBerlin&amp;chartLeftToolbar=show&amp;theme=dark&amp;cssCustomProperties=--tv-color-platform-background%3A%23000000&amp;cssCustomProperties=--tv-color-pane-background%3A%23000000&amp;chartOverrides=paneProperties.backgroundGradientStartColor%3Argba%280%2C+0%2C+0%2C+1%29&amp;chartOverrides=paneProperties.backgroundGradientEndColor%3Argba%280%2C+0%2C+0%2C+1%29" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </div>
