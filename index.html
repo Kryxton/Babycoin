@@ -238,7 +238,7 @@
 <body>
   <!-- SPLASH SCREEN (Video) -->
   <div class="splash-screen" id="splashScreen">
-    <video id="splashVideo" autoplay muted playsinline preload="auto" class="intro-video">
+    <video id="splashVideo" autoplay muted playsinline loop preload="auto" class="intro-video">
       <source src="splash.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -292,11 +292,17 @@
       
       <!-- Meme Section with Video -->
       <div class="meme-section">
-        <h2>Meme Video</h2>
+        <h2></h2>
         <div class="meme-container">
           <div class="meme-item">
-            <video autoplay muted playsinline preload="auto">
+            <video autoplay muted playsinline loop preload="auto">
               <source src="meme.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="meme-item">
+            <video autoplay muted playsinline loop preload="auto">
+              <source src="meme2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
