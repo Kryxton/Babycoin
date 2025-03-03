@@ -43,7 +43,7 @@
     }
     .splash-screen video {
       width: 100vw;   /* Always fill the viewport width */
-      height: auto;   /* Maintain aspect ratio */
+      height: auto;   /* Keep natural aspect ratio */
     }
     
     /*****************************************
@@ -340,24 +340,15 @@
         console.error("Error playing splash video:", error);
       });
       
-      // When the video ends, fade out the splash screen.
-      splashVideo.addEventListener('ended', fadeOutSplash);
-      
-      // Fallback: if the video hasn't ended in 10 seconds, fade out.
+      // Fade out the splash screen after 3 seconds
       setTimeout(function() {
-        if (splashScreen.style.display !== 'none') {
-          fadeOutSplash();
-        }
-      }, 10000);
-      
-      function fadeOutSplash() {
         splashScreen.style.opacity = '0';
         setTimeout(function() {
           splashScreen.style.display = 'none';
           document.body.style.overflow = 'auto';
           mainContent.style.display = 'block';
         }, 1000);
-      }
+      }, 3000);
     });
   </script>
 </body>
